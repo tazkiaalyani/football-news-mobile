@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:football_news/screens/menu.dart';
 import 'package:football_news/screens/newslist_form.dart';
+import 'package:football_news/screens/news_entry_list.dart';
 
 // TODO: Impor halaman NewsFormPage jika sudah dibuat
 
@@ -61,6 +63,18 @@ class LeftDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => const NewsFormPage()),
               );
+              ListTile(
+                leading: const Icon(Icons.add_reaction_rounded),
+                title: const Text('News List'),
+                onTap: () {
+                  // Route to news list page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NewsEntryListPage()),
+                  );
+                },
+              );
+
               /*
     setelah halaman NewsFormPage sudah dibuat.
     */
